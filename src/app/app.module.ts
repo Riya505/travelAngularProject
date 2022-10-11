@@ -8,7 +8,22 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes:Routes=[
+  {
+    path:"",component:TravelComponent
+  },
+  {
+    path:"about",component:AboutComponent
+  },
+  {
+    path:"contact",component:ContactComponent
+  },
+  {
+    path:"feedback",component:FeedbackComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +35,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
