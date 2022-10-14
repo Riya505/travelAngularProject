@@ -10,34 +10,34 @@
             <div class="row g-3">
               <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Name</label>
-                <input placeholder="Enter name" type="text" class="form-control">
+                <input placeholder="Enter name" type="text" class="form-control" name="name" [(ngModel)]="name">
               </div>
               <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Email</label>
-                <input placeholder="ex@gmail.com" type="email" name="" id="" class="form-control">
+                <input placeholder="ex@gmail.com" type="email" name="email" id="" class="form-control" [(ngModel)]="email">
               </div>
               <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Select tour package</label>
-                <select name="" id="" class="form-control">
-                  <option value="goa"></option>
-                  <option value="manali"></option>
-                  <option value="kashmir"></option>
+                <select name="" id="" class="form-control" name="tourPackage" [(ngModel)]="tourPackage">
+                  <option value="goa">goa</option>
+                  <option value="manali">manali</option>
+                  <option value="kashmir">kashmir</option>
               </select>
               </div>
               <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Arrival date</label>
-                <input type="date" name="" id="" class="form-control">
+                <input type="date" name="arrivalDate" id="" class="form-control" [(ngModel)]="arrivalDate">
               </div>
               <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Number of person</label>
-                <input placeholder="Enter number of person" type="text" class="form-control">
+                <input placeholder="Enter number of person" type="text" class="form-control" name="numberOfPerson" [(ngModel)]="numberOfPerson">
               </div>
               <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">discount coupon code</label>
-                <input placeholder="enter discount coupon code" type="text" class="form-control">
+                <input placeholder="enter discount coupon code" type="text" class="form-control" name="discountCouponCode" [(ngModel)]="discountCouponCode">
               </div>
               <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <button class="btn btn-primary">Complete reservation</button>
+                <button class="btn btn-primary" (click)="readValues()">Complete reservation</button>
               </div>
             </div>
 
