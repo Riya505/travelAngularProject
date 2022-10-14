@@ -7,22 +7,22 @@
         <div class="row g-3">
           <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <label for="" class="form-label">First name</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="firstName" [(ngModel)]="firstName">
           </div>
           <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <label for="" class="form-label">Last name</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="lastName" [(ngModel)]="lastName">
           </div>
           <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <label for="" class="form-label">Email</label>
-            <input type="email" name="" id="" class="form-control">
-          </div>
-          <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-            <label for="" class="form-label">Feedback</label>
-            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+            <input type="email" name="email" id="" class="form-control" [(ngModel)]="email">
           </div>
           <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <button class="btn btn-success">Submit</button>
+            <label for="" class="form-label">Feedback</label>
+            <textarea name="feedback" id="" cols="30" rows="10" class="form-control" [(ngModel)]="feedback"></textarea>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <button class="btn btn-success" (click)="readValue()">Submit</button>
           </div>
         </div>
 
